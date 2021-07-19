@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
+const PORT = process.env.PORT || 9890;
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -52,6 +53,6 @@ app.get("/errorgifdata", (req, res) => {
 
 });
 
-app.listen(9890 || process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log("server started at port 9890");
 })
