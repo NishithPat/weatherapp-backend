@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
     res.send("Home page");
 });
 
+app.get("/page", (req, res) => {
+    res.send("another page");
+})
+
 app.get("/weatherdata", (req, res) => {
 
     const city = req.query.q;
